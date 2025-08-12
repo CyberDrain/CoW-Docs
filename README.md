@@ -37,7 +37,7 @@ COW offers flexible pricing to accommodate various needs. Small shop managing le
 * **Up to 250 Devices**: Manage up to 250 devices at no cost. This is perfect for smaller MSPs or those looking to conduct a proof of concept.
 * **No Support:** The free version does not come with dedicated support, you are welcome to join the Discord to engage with other users.
 
-### Unlimited Devices
+### Pro Teir
 
-* **$69 per Month**: For just $69 a month, enjoy the ability to manage an unlimited number of devices.
+* **$69 per Month**: For just $69 a month, enjoy the ability to manage  up to 50,000 devices.
 * **Scalable Solution**: Ideal for growing MSPs looking for scalable device management.

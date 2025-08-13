@@ -6,8 +6,8 @@ There are three main pages for you to know about and understand within COW, and 
 [overview.md](overview.md)
 {% endcontent-ref %}
 
-{% content-ref url="clients-and-devices.md" %}
-[clients-and-devices.md](clients-and-devices.md)
+{% content-ref url="devices.md" %}
+[devices.md](devices.md)
 {% endcontent-ref %}
 
 {% content-ref url="settings.md" %}

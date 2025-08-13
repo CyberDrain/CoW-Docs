@@ -1,10 +1,10 @@
 ---
 description: >-
   This overview helps users understand how to manage device info and warranties
-  efficiently via the Clients & Devices page.
+  efficiently via the Devices page.
 ---
 
-# Clients & Devices
+# Devices
 
 ## Page Components
 

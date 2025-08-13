@@ -6,7 +6,8 @@
 * [Onboarding Wizard](getting-started/onboarding-wizard.md)
 * [Navigation](getting-started/navigation/README.md)
   * [Overview](getting-started/navigation/overview.md)
-  * [Clients & Devices](getting-started/navigation/clients-and-devices.md)
+  * [Devices](getting-started/navigation/devices.md)
+  * [Lookup](getting-started/navigation/lookup.md)
   * [Settings](getting-started/navigation/settings.md)
 
 ## Inputs

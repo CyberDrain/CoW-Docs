@@ -17,7 +17,7 @@ COW is designed to streamline the management of device warranties for CyberDrain
 #### CSV Import / Export
 
 * **Manual Data Import**: COW supports [csv-import.md](inputs/csv-import.md "mention"). This is ideal for a more customized approach, for a one-time data reconciliation, or those not using one of the supported [psa-integrations](inputs/psa-integrations/ "mention").
-* **Export Updated CSVs:** Download the updated list of data from your [clients-and-devices.md](getting-started/navigation/clients-and-devices.md "mention") page once COW has gone and collected all the warranty details and imported them for you.
+* **Export Updated CSVs:** Download the updated list of data from your [devices.md](getting-started/navigation/devices.md "mention") page once COW has gone and collected all the warranty details and imported them for you.
 
 ## What It Does Not Do
 

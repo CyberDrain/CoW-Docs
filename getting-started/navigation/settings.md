@@ -32,4 +32,4 @@ This tab will manage allowed users and access control settings.
 
 ### Advanced
 
-This tab will contain advanced configuration options, debugging settings, and experimental features. Currently you are able to change the organization owner and purge the organization data from COW.
+This tab will contain advanced configuration options, debugging settings, and experimental features. Currently you are able to change the organization owner, clear sync status, and purge the organization data from COW.

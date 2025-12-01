@@ -5,10 +5,13 @@
 * [Introduction](README.md)
 * [Onboarding Wizard](getting-started/onboarding-wizard.md)
 * [Navigation](getting-started/navigation/README.md)
+  * [Menu Bar](getting-started/navigation/menu-bar.md)
   * [Overview](getting-started/navigation/overview.md)
   * [Devices](getting-started/navigation/devices.md)
   * [Lookup](getting-started/navigation/lookup.md)
+  * [Onboarding](getting-started/navigation/onboarding.md)
   * [Settings](getting-started/navigation/settings.md)
+  * [Logs](getting-started/navigation/logs.md)
 
 ## Inputs
 

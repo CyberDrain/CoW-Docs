@@ -10,10 +10,10 @@ description: >-
 
 ### Actions
 
-| Action                           | Description                                                                                                                           |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| Download Latest Devices from PSA | Download the device list from your PSA to fill the table with the latest info based on the filters that you set during configuration. |
-| Update Warranties                | Refresh warranty information for all devices in the table and update them back to the mapped devices in your PSA.                     |
+| Action                  | Description                                                                                                                                                                                                                                               |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sync Devices            | Syncs the device list from your PSA to fill the table with the latest info based on the filters that you set during configuration.                                                                                                                        |
+| Device Lifecycle Report | Generates a PDF lifecycle report. This is fully brandable with your own custom logo and primary color scheme. Select the client, report currency, and average replacement cost to update the PDF. Once completed, click `Download PDF` to save your copy. |
 
 {% hint style="warning" %}
 Make sure you download any latest data prior to updating to ensure the most up to date details are being reflected in your sync.
@@ -27,6 +27,10 @@ Make sure you download any latest data prior to updating to ensure the most up t
 | Percentage OK   | Shows the % of devices with valid warranties.               |
 | Active Devices  | Displays the # of devices with active warranties.           |
 | Expired Devices | Displays the # of devices with expired warranties.          |
+
+### Sync Status Bar
+
+This bar will show you the status of your warranty sync. It shows the current stage of the sync process along with a percentage of completion.
 
 ### Clients and Devices Table
 
@@ -62,6 +66,5 @@ You can perform specific actions on multiple or individual rows by clicking the 
 
 | Action           | Description                                                                                   |
 | ---------------- | --------------------------------------------------------------------------------------------- |
-| Sync with PSA    | Updates the device information by syncing with the connected PSA system.                      |
 | Get Warranty     | Fetches the latest warranty details for the selected device from the CyberDrain Warranty API. |
 | Delete Device(s) | Removes the device from the list. Use this action with caution, as it cannot be undone.       |

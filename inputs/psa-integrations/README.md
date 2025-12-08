@@ -1,6 +1,6 @@
 # PSA Integrations
 
-With the sponsored version of COW, users are able to connect to their PSA for automatic synchronization and update of warranties for the devices within the system. The setup instructions for the supported PSAs can be found on the following pages
+With COW, users are able to connect to their PSA for automatic synchronization and update of warranties for the devices within the system. The setup instructions for the supported PSAs can be found on the following pages:
 
 {% content-ref url="autotask-psa/" %}
 [autotask-psa](autotask-psa/)

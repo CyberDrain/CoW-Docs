@@ -14,7 +14,7 @@ To enable secure warranty sync while following least privilege principles, youâ€
 8. Add "Products" with "View All" permissions
 9. Click on the "Admin" header
 10. Check the box for "Configuration Items"
-11. Save this permission with your own name, such as "Cow.Tech Warranty Permissions"
+11. Save this permission with your own name, such as "COW Warranty Permissions"
 
 
 

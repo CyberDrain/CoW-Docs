@@ -23,4 +23,4 @@ Be sure to follow the guidance in [connectwise-permissions.md](connectwise-permi
 
 ### Setup
 
-{% embed url="https://app.storylane.io/share/bpolnztakfn9" %}
+{% @storylane/embed subdomain="app" linkValue="o0opja2qvrze" url="https://app.storylane.io/share/o0opja2qvrze" %}

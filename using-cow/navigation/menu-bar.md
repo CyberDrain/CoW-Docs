@@ -2,7 +2,7 @@
 
 The top menu bar has a few features that you may want to know.
 
-### Display Mode
+## Display Mode
 
 Clicking this toggle will switch the display mode for COW.
 
@@ -11,7 +11,7 @@ The top menu bar has a few features that you may want to know.
 * Light mode
 * Dark mode
 
-### Help & Support
+## Help & Support
 
 Here you will find options on how you can get support for COW.
 

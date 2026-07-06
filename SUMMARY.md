@@ -3,26 +3,27 @@
 ## Getting Started
 
 * [Introduction](README.md)
-* [Onboarding Wizard](getting-started/onboarding-wizard.md)
-* [Navigation](getting-started/navigation/README.md)
-  * [Menu Bar](getting-started/navigation/menu-bar.md)
-  * [Overview](getting-started/navigation/overview.md)
-  * [Devices](getting-started/navigation/devices.md)
-  * [Lookup](getting-started/navigation/lookup.md)
-  * [Onboarding](getting-started/navigation/onboarding.md)
-  * [Settings](getting-started/navigation/settings.md)
-  * [Logs](getting-started/navigation/logs.md)
+* [Getting Started](getting-started/getting-started.md)
 
-## Inputs
+## Using COW
 
-* [CSV Import](inputs/csv-import.md)
-* [PSA Integrations](inputs/psa-integrations/README.md)
-  * [Autotask PSA](inputs/psa-integrations/autotask-psa/README.md)
-    * [Autotask Permissions](inputs/psa-integrations/autotask-psa/autotask-permissions.md)
-  * [ConnectWise PSA](inputs/psa-integrations/connectwise-psa/README.md)
-    * [Connectwise Permissions](inputs/psa-integrations/connectwise-psa/connectwise-permissions.md)
-  * [HaloPSA](inputs/psa-integrations/halopsa/README.md)
-    * [Halo PSA Permissions](inputs/psa-integrations/halopsa/halo-psa-permissions.md)
+* [Navigation](using-cow/navigation/README.md)
+  * [Menu Bar](using-cow/navigation/menu-bar.md)
+  * [Overview](using-cow/navigation/overview/README.md)
+    * [Messages](using-cow/navigation/overview/messages.md)
+  * [Devices](using-cow/navigation/devices/README.md)
+    * [CSV Import](using-cow/navigation/devices/csv-import.md)
+  * [Lookup](using-cow/navigation/lookup.md)
+  * [Integrations](using-cow/navigation/integrations/README.md)
+    * [Autotask PSA](using-cow/navigation/integrations/autotask-psa/README.md)
+      * [Autotask Permissions](using-cow/navigation/integrations/autotask-psa/autotask-permissions.md)
+    * [ConnectWise PSA](using-cow/navigation/integrations/connectwise-psa/README.md)
+      * [Connectwise Permissions](using-cow/navigation/integrations/connectwise-psa/connectwise-permissions.md)
+    * [HaloPSA](using-cow/navigation/integrations/halopsa/README.md)
+      * [Halo PSA Permissions](using-cow/navigation/integrations/halopsa/halo-psa-permissions.md)
+    * [Azure Table](using-cow/navigation/integrations/azure-table.md)
+  * [Settings](using-cow/navigation/settings.md)
+  * [Logs](using-cow/navigation/logs.md)
 
 ## Troubleshooting
 

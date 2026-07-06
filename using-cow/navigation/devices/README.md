@@ -6,12 +6,11 @@ description: >-
 
 # Devices
 
-## Page Components
-
-### Actions
+## Actions
 
 | Action                  | Description                                                                                                                                                                                                                                               |
 | ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Import CSV              | This will allow you to import a CSV of devices if you need to utilize COW outside of one of the supported [integrations](../integrations/ "mention"). See [csv-import.md](csv-import.md "mention") for more information.                                  |
 | Sync Devices            | Syncs the device list from your PSA to fill the table with the latest info based on the filters that you set during configuration.                                                                                                                        |
 | Device Lifecycle Report | Generates a PDF lifecycle report. This is fully brandable with your own custom logo and primary color scheme. Select the client, report currency, and average replacement cost to update the PDF. Once completed, click `Download PDF` to save your copy. |
 
@@ -19,7 +18,7 @@ description: >-
 Make sure you download any latest data prior to updating to ensure the most up to date details are being reflected in your sync.
 {% endhint %}
 
-### Dashboard
+## Dashboard
 
 | Component       | Description                                                 |
 | --------------- | ----------------------------------------------------------- |
@@ -32,11 +31,11 @@ Make sure you download any latest data prior to updating to ensure the most up t
 
 This bar will show you the status of your warranty sync. It shows the current stage of the sync process along with a percentage of completion.
 
-### Clients and Devices Table
+## Clients and Devices Table
 
 The table provides detailed information about each device, with functionality to search, filter, sort, and manage data effectively.
 
-#### Table Details
+### Table Details
 
 | Column               | Description                                                                                                             |
 | -------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -50,7 +49,7 @@ The table provides detailed information about each device, with functionality to
 | End Date             | The expiration date of the warranty.                                                                                    |
 | Warranty Type        | Describes the type of warranty (e.g., Unknown).                                                                         |
 
-#### Table Features
+### Table Features
 
 | Feature             | Description                                                                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -60,11 +59,6 @@ The table provides detailed information about each device, with functionality to
 | Density Toggle      | Adjust the table density for compact or comfortable viewing                                                                           |
 | Density Toggle      | Export the table data to a PDF file for offline viewing or sharing or a CSV file for further processing.                              |
 
-#### Table Actions
+### Table Actions
 
-You can perform specific actions on multiple or individual rows by clicking the action icon at the end of the row, or by checking the boxes beside the devices and then selecting `Bulk Actions`
-
-| Action           | Description                                                                                   |
-| ---------------- | --------------------------------------------------------------------------------------------- |
-| Get Warranty     | Fetches the latest warranty details for the selected device from the CyberDrain Warranty API. |
-| Delete Device(s) | Removes the device from the list. Use this action with caution, as it cannot be undone.       |
+<table><thead><tr><th>Action</th><th>Description</th><th data-type="checkbox">Bulk Action Available</th></tr></thead><tbody><tr><td>Get Warranty</td><td>Fetches the latest warranty details for the selected device from the CyberDrain Warranty API.</td><td>true</td></tr><tr><td>Delete Device(s)</td><td>Removes the device from the list. Use this action with caution, as it cannot be undone.</td><td>true</td></tr></tbody></table>

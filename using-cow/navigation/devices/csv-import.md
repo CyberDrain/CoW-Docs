@@ -19,17 +19,3 @@ Before importing your data, ensure that your CSV file meets the following specif
 {% hint style="warning" %}
 Ensure your CSV file adheres to the specified format with no missing or extra columns. Keep your file size manageable to prevent slow uploads or potential errors during processing.
 {% endhint %}
-
-### Import Options
-
-#### Manual CSV Import
-
-You can manually upload the CSV to COW directly once it is properly formatted.
-
-#### Azure Blob Storage Import
-
-Save the file to Azure Blob Storage and create a [shared access signature (SAS) link](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
-
-{% hint style="warning" %}
-The SAS link needs Read, Create, and Write permissions and must be valid for at least a year
-{% endhint %}

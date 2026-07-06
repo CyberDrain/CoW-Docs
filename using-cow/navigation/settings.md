@@ -10,14 +10,6 @@ This tab will include information on your subscription, including who the owner 
 
 This tab will allow you to manage your COW subscription.
 
-### PSA Configuration
-
-This tab is for PSA settings, client selection, device types, etc.
-
-{% hint style="warning" %}
-The PSA configuration interface is currently being developed. For now, please re-run the  [onboarding-wizard.md](../onboarding-wizard.md "mention") to configure your PSA settings.
-{% endhint %}
-
 ### Email Notifications
 
 This tab will configure email notification preferences including sync completion, sync failures, and warranty updates.

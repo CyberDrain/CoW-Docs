@@ -11,13 +11,13 @@ COW is designed to streamline the management of device warranties for CyberDrain
 
 #### Integration with PSA Tools
 
-* **Effortless Synchronization**: Integrate with popular PSA tools like [autotask-psa](inputs/psa-integrations/autotask-psa/ "mention"), [connectwise-psa](inputs/psa-integrations/connectwise-psa/ "mention"), and [halopsa](inputs/psa-integrations/halopsa/ "mention") allowing for smooth data synchronization and management.
+* **Effortless Synchronization**: Integrate with popular PSA tools like [autotask-psa](using-cow/navigation/integrations/autotask-psa/ "mention"), [connectwise-psa](using-cow/navigation/integrations/connectwise-psa/ "mention"), and [halopsa](using-cow/navigation/integrations/halopsa/ "mention") allowing for smooth data synchronization and management.
 * **Enhanced Flexibility**: Choose the configuration of clients and types that best fits your business needs for optimized operations.
 
 #### CSV Import / Export
 
-* **Manual Data Import**: COW supports [csv-import.md](inputs/csv-import.md "mention"). This is ideal for a more customized approach, for a one-time data reconciliation, or those not using one of the supported [psa-integrations](inputs/psa-integrations/ "mention").
-* **Export Updated CSVs:** Download the updated list of data from your [devices.md](getting-started/navigation/devices.md "mention") page once COW has gone and collected all the warranty details and imported them for you.
+* **Manual Data Import**: COW supports [csv-import.md](using-cow/navigation/devices/csv-import.md "mention"). This is ideal for a more customized approach, for a one-time data reconciliation, or those not using one of the supported .
+* **Export Updated CSVs:** Download the updated list of data from your [devices](using-cow/navigation/devices/ "mention") page once COW has gone and collected all the warranty details and imported them for you.
 
 ## What It Does Not Do
 

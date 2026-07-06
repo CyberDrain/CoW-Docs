@@ -19,4 +19,4 @@ Before you begin the integration process, ensure you have the following informat
 
 ### Setup
 
-{% embed url="https://app.storylane.io/share/tqn8d1cxid6k" %}
+{% @storylane/embed subdomain="app" linkValue="xmyh2w67fya7" url="https://app.storylane.io/share/xmyh2w67fya7" %}

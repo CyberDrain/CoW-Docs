@@ -1,6 +1,6 @@
 # Azure Table
 
-Connect CoW to an Azure Table Storage table containing your devices. COW reads your devices from the table, looks up warranties, and (optionally) writes the results back into the same rows.
+Connect CoW to an **Azure Table Storage** table containing your devices — the self-serve option for technical MSPs who want to push and pull data programmatically. You run the table in your own Azure tenant and populate it however you like (script, Rewst, Power Automate, PSA export). COW reads your devices, looks up warranties, and — optionally — writes the results back into the same rows.
 
 ### Prerequisites
 
@@ -13,7 +13,9 @@ Your table must contain these columns (all required — the Test step fails if a
 * `CompanyId`: your identifier for the client.
 * `DeviceId`: your identifier for the device.
 
-`StartDate` and `EndDate` are optional (CoW reads existing warranty dates if present, and overwrites them on write-back). Each row's Azure `PartitionKey`/`RowKey` are used to target write-back, so keep them stable.
+{% hint style="info" %}
+**Optional**: `StartDate` / `EndDate` if you already hold warranty dates (CoW reads them, and overwrites on write-back). Each row's Azure `PartitionKey`/`RowKey` are used to target write-back — keep them stable.
+{% endhint %}
 
 ## Import Steps
 
@@ -49,6 +51,17 @@ Click Submit to save the enablement of the integration
 {% endstep %}
 {% endstepper %}
 
+### What CoW writes back
+
+With **Write Back to Table** on, for each device where a warranty is found CoW updates that device's **existing row** (matched on its original `PartitionKey`/`RowKey`) with `StartDate`, `EndDate` (both `YYYY-MM-DD`), `Warranty` (description), `Status`, and `WarrantyJSON` (a compact JSON of all of it plus the lookup time). Unresolved devices are left untouched and retried next sync.
+
+### Troubleshooting
+
+* **Test fails "missing required columns"** — add the exact column names above (case-sensitive).
+* **Test fails "table is empty"** — the column check needs at least one row.
+* **Some devices never appear** — filtered for empty/placeholder `DeviceSerial`, blank `ClientName`, undetectable manufacturer, or your plan's device cap (upgrade to raise it).
+* **Warranties aren't writing back** — confirm write-back is on, the SAS has Add/Update, and rows still have the `PartitionKey`/`RowKey` CoW first read them under.
+
 {% hint style="warning" %}
-For write-back, the SAS token needs Read, Add, and Update permissions. Set the expiry well into the future — syncs stop when the token expires.
+For write-back, the SAS token needs Read, Add, and Update. Set the expiry well into the future — syncs stop when it expires.
 {% endhint %}

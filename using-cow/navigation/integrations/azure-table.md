@@ -1,8 +1,8 @@
 # Azure Table
 
-Connect CoW to an **Azure Table Storage** table containing your devices — the self-serve option for technical MSPs who want to push and pull data programmatically. You run the table in your own Azure tenant and populate it however you like (script, Rewst, Power Automate, PSA export). COW reads your devices, looks up warranties, and — optionally — writes the results back into the same rows.
+Connect CoW to an **Azure Table Storage** table containing your devices — the self-serve option for technical MSPs who want to push and pull data programmatically. You run the table in your own Azure tenant and populate it however you like (script, Rewst, Power Automate, PSA export). CoW reads your devices, looks up warranties, and — optionally — writes the results back into the same rows.
 
-### Prerequisites
+## Prerequisites
 
 Your table must contain these columns (all required — the Test step fails if any are missing):
 
@@ -23,7 +23,7 @@ Your table must contain these columns (all required — the Test step fails if a
 {% step %}
 ### Create a SAS link
 
-Follow Microsoft's documentation to create a [shared access signature (SAS) link](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers).
+Follow Microsoft's documentation to create a [shared access signature (SAS) token](https://learn.microsoft.com/en-us/azure/ai-services/translator/document-translation/how-to-guides/create-sas-tokens?tabs=Containers). Read-only sync needs **Read** (query) permission; add **Add** and **Update** as well if you plan to enable write-back. When you copy it from Azure, paste the **SAS token string** — the part after the `?` — not the full SAS URL.
 {% endstep %}
 
 {% step %}
@@ -47,21 +47,22 @@ Toggle on "Enable Integration". Optionally toggle "Write Back to Table" to save 
 {% step %}
 ### Submit
 
-Click Submit to save the enablement of the integration
+Click Submit to save the enablement of the integration. CoW queues the first sync immediately, then re-syncs each integration roughly once a day.
 {% endstep %}
 {% endstepper %}
 
-### What CoW writes back
+## What COW writes back
 
 With **Write Back to Table** on, for each device where a warranty is found CoW updates that device's **existing row** (matched on its original `PartitionKey`/`RowKey`) with `StartDate`, `EndDate` (both `YYYY-MM-DD`), `Warranty` (description), `Status`, and `WarrantyJSON` (a compact JSON of all of it plus the lookup time). Unresolved devices are left untouched and retried next sync.
 
-### Troubleshooting
+## Troubleshooting
 
 * **Test fails "missing required columns"** — add the exact column names above (case-sensitive).
 * **Test fails "table is empty"** — the column check needs at least one row.
+* **Test fails to authenticate** — make sure you pasted the SAS **token string** (the part after the `?`), not the full SAS URL.
 * **Some devices never appear** — filtered for empty/placeholder `DeviceSerial`, blank `ClientName`, undetectable manufacturer, or your plan's device cap (upgrade to raise it).
 * **Warranties aren't writing back** — confirm write-back is on, the SAS has Add/Update, and rows still have the `PartitionKey`/`RowKey` CoW first read them under.
 
 {% hint style="warning" %}
-For write-back, the SAS token needs Read, Add, and Update. Set the expiry well into the future — syncs stop when it expires.
+Set the SAS token's expiry well into the future — syncs stop the moment it expires, and you'll need to generate a new one.
 {% endhint %}

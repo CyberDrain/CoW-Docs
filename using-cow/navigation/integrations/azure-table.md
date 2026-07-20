@@ -1,16 +1,19 @@
 # Azure Table
 
-This option will allow you to connect to Azure Blob Storage and pull your devices from a table stored there.&#x20;
+Connect CoW to an Azure Table Storage table containing your devices. COW reads your devices from the table, looks up warranties, and (optionally) writes the results back into the same rows.
 
-## Prerequisites
+### Prerequisites
 
-Before importing your data, ensure that your table meets the following specifications:
+Your table must contain these columns (all required — the Test step fails if any are missing):
 
-* **Columns**: Your table file must contain the following columns:
-  * `ClientName`: The name of the client associated with each device.
-  * `DeviceSerial`: The unique serial number of each device.
-  * `DeviceProductNumber`: The product number for each device if required.
-  * `DeviceManufacturer`: The manufacturer of each device.
+* `ClientName`: the end client each device belongs to.
+* `DeviceSerial`: the device serial number (CoW's lookup key).
+* `DeviceManufacturer`: the manufacturer. If blank or `Unknown`, CoW attempts to detect it from the serial.
+* `DeviceName`: a friendly device name.
+* `CompanyId`: your identifier for the client.
+* `DeviceId`: your identifier for the device.
+
+`StartDate` and `EndDate` are optional (CoW reads existing warranty dates if present, and overwrites them on write-back). Each row's Azure `PartitionKey`/`RowKey` are used to target write-back, so keep them stable.
 
 ## Import Steps
 
@@ -30,13 +33,13 @@ Enter the Storage Account Name, Table Name, and SAS token.
 {% step %}
 ### Test the Connection
 
-Click the Test button to ensure the saved credentials are properly working
+Click Test to confirm the token authenticates, the table is readable, and all required columns are present (your table needs at least one row for the column check).
 {% endstep %}
 
 {% step %}
 ### Enable the Integration
 
-Toggle on "Enable Integration". You can optionally toggle on "Write Back to Table" which will save the warranty data to your table
+Toggle on "Enable Integration". Optionally toggle "Write Back to Table" to save warranty results (`StartDate`, `EndDate`, `Warranty`, `Status`, `WarrantyJSON`) back onto your existing rows.
 {% endstep %}
 
 {% step %}
@@ -47,5 +50,5 @@ Click Submit to save the enablement of the integration
 {% endstepper %}
 
 {% hint style="warning" %}
-The SAS link needs Read, Create, and Write permissions and must be valid for at least a year
+For write-back, the SAS token needs Read, Add, and Update permissions. Set the expiry well into the future — syncs stop when the token expires.
 {% endhint %}
